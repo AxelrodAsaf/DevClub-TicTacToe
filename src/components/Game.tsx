@@ -2,10 +2,10 @@ import { useState } from "react";
 import Board from "./Board";
 
 export default function Game() {
-    const [squares, __] = useState<(string | null)[]>(
+    const [squares, setSquares] = useState<(string | null)[]>(
         Array(9).fill(null)
     );
-    const [isXNext, _] = useState(true);
+    const [isXNext, setIsNext] = useState(true);
 
     function handleSquareClick(index: number) {
         // Temporary: no gameplay logic yet
